@@ -9,11 +9,10 @@ function checkPalindrome(str) {
   }
 console.log(checkPalindrome("Radar"));
 console.log(checkPalindrome("Borscht"));
-//Sum Array
-function sumArray(arr) {
-let sum = 0;
-    for (let sum = 0; sum < arr.length; i++); {
-        sum += sumArray[sum]
-      }
+// //Sum Array
+var num = [1, 2, 3, 4, 5, 6]; 
+var sumArray = 0
+  for (var i = 0; i < num.length; i++) {
+    sumArray += num[i];
 }
-console.log(sumArray([1, 2, 3, 4, 5, 6]));
+console.log(sumArray);
