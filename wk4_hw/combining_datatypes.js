@@ -32,6 +32,13 @@ const findItem = (size, item)=>{
     }
     console.log(findItem('scarf'));
 
+const crayonSelector = ()=>{
+    return { 
+        colorChoice: ['red', 'green', 'yellow']
+    }
+};
+console.log(crayonSelector().colorChoice[1]);
+
 const options = () => {
     console.log('Select a song');
       };
