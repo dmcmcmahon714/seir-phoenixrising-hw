@@ -22,5 +22,20 @@ const apartmentBuilding = [
 }
 ];
 console.log(apartmentBuilding[0].name);
+// Combining objects, arrays, and functions more than one level deep
+const findItem = (size, item)=>{
+    if (size === '6ft') {
+        return 'scarf';
+    } else {
+        return '6ft'
+    }
+    }
+    console.log(findItem('scarf'));
 
-
+const options = () => {
+    console.log('Select a song');
+      };
+const powerButton = () => {
+      return options()
+}
+powerButton();
