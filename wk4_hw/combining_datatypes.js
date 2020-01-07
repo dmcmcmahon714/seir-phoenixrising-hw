@@ -46,3 +46,67 @@ const powerButton = () => {
       return options()
 }
 powerButton();
+
+const vendingMachine = [    
+    {name: 'fritos',
+    price: 'two'
+},
+{
+    name: 'cheetos',
+    price: 'one'
+},
+{   name: 'doritos',
+    price: 'two'    
+}
+];
+const vend = (num)=>{
+ if (num === 1) {
+     return console.log(vendingMachine[0].name);
+ } 
+else if (num === 2) {
+     return console.log(vendingMachine[1].name);
+ }
+else if (num === 3) {
+    return console.log(vendingMachine[2].name);
+} else {
+    return "sorry"
+};
+}
+vend(2)
+const add = (num1, num2)=>{
+    return num1 + num2
+}
+console.log(add(1,2));
+const subtract = (num1, num2)=>{
+    return num1 - num2
+}
+console.log(subtract(4,2));
+const multiply = (num1, num2)=>{
+    return num1 * num2
+}
+console.log(multiply(6,2));
+const divide = (num1, num2)=>{
+    return num1/num2
+}
+console.log(divide(18,3));
+const operates = (num1, num2, operation)=>{
+    return operation(num1, num2);
+}
+console.log(operates(8, 4, multiply));
+console.log(operates(6, 3, divide));
+console.log(operates(19, 4, subtract));
+console.log(operates(5, 9, add));
+
+const bar = () => {
+    console.log('bar here');
+}
+bar();
+
+const foo = () => {
+    console.log('foo here');
+}
+foo();
+
+
+
+
