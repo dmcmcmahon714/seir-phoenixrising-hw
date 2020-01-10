@@ -77,8 +77,10 @@ const stringSplit = panagrams.map((str)=>{
     return str.split("")
 })
 const findA = stringSplit.map((str)=>{
-    if (str === "a") {
-    return str}
+    for (i = 0; i<=str.length; i++); {
+        if (str === "a") {
+        return str}
+}
 })
 console.log(findA);
 //yes there are a's
