@@ -106,6 +106,12 @@ const foo = () => {
     console.log('foo here');
 }
 foo();
+// foo();
+
+// const foo ()=>{
+//     console.log('hi');
+//}
+//The function is invoked before it can be defined.
 
 
 
