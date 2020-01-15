@@ -54,14 +54,11 @@ let playerShip = {
   console.log("Generating enemy ships");
   enemy = new AlienShip();
   console.log(enemy);
-  enemies[]
-  for (let i=0; i < enemies.length; i++)
-  // TODO: Upgrade to an array of 6 enemy ships:
-  // enemies = [];
-  // for (let i = 0; i < 6; i++) {
-  //   enemies.push(new AlienShip());
-  // }
-  // console.log(enemies);
+  enemies = ['Zardon', 'Milzok', 'Darth Vader', 'Voldemort', 'Harry Potter'];
+  for (let i = 0; i < 6; i++) {
+    enemies.push(new AlienShip());
+  }
+  console.log(enemies);
   while (gameState.playerIsAlive()) {
     // Turn by turn logic
     // Player ship attacks:
@@ -89,3 +86,5 @@ let playerShip = {
   // End game logic
   // Player either lost or retreated:
   console.log("Game over");
+
+  
