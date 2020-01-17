@@ -1,7 +1,20 @@
 $(() => {
-    const $container = $('#container').attr('container');
+    const $container = $('#container');
+    $("body").append($container);
 console.log($container);
-    const $h1 = $('<h1>');
-    $('#container').append('<h1>').text('Harry');
-    console.log($h1);
+    const $h1 = $('<h1>').text("Harry");
+    $container.append($h1);
+console.log($h1);
+    const $h2 = $('<h2>').text("Dan");
+    $container.append($h2);
+console.log($h2);
+const $h3 = $('<h3>').text("Hufflepuff");
+    $container.append($h3);
+console.log($h3);
+const $h4 = $('<h4>').text("Billy").addClass("cat");
+    $container.append($h4);
+console.log($h4);
+const $h5 = $('<h4>').text("Hornbeam with Dragon Heartstring Core");
+    $container.append($h5);
+console.log($h5);
 });
