@@ -12,3 +12,14 @@ body {
 ul {
     list-style-type: none;
 }
+table {
+    text-align: center;
+    width: 100%;
+}
+th {
+    display: inline-block;
+    border: 1px solid black;
+}
+td {
+    border: 1px solid black;
+}
