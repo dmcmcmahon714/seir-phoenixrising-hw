@@ -78,8 +78,7 @@ const crazyObject
 //   }
 //   colors.push("black");
 //   console.log(colors)
-const bondFilms = {
-   [
+const bondFilms = [
     { "title" : "Skyfall", "year" : 2012, "actor" : "Daniel Craig", "gross" : "$1,108,561,008" },
     { "title" : "Thunderball", "year" : 1965, "actor" : "Sean Connery", "gross" : "$1,014,941,117" },
     { "title" : "Goldfinger", "year" : 1964, "actor" : "Sean Connery", "gross" : "$912,257,512" },
@@ -103,4 +102,40 @@ const bondFilms = {
     { "title" : "The Living Daylights", "year" : 1987, "actor" : "Timothy Dalton", "gross" : "$381,088,866" },
     { "title" : "A View to a Kill", "year" : 1985, "actor" : "Roger Moore", "gross" : "$321,172,633" },
     { "title" : "License to Kill", "year" : 1989, "actor" : "Timothy Dalton", "gross" : "$285,157,191" }
-  ]
+  ];
+// create array
+const bondTitles = [];
+//loop over
+for (let film of bondFilms) {
+  bondTitles.push(film.title);
+}
+console.log(bondTitles);
+//create empty array
+const oddBonds = [];
+//loop over
+for (let film of bondFilms) {
+  if (film.year %2 !==0) {
+    oddBonds.push(film)
+  }
+}
+console.log(oddBonds);
+// create empty array from gross
+const grossArray = [];
+//loop through
+for (let film of bondFilms) {
+//make dollar value a number, not a string
+// remove dollar sign 
+let removeDollar = film.gross.replace('$', '');
+//remove commas
+let removeComma = removeDollar.replace(/,/g, '');
+//create variable for converted number
+let convertedNum = Number(removeComma);
+grossArray.push(convertedNum);
+}
+//create variable for total
+let grossTotal = 0;
+//loop through converted values
+for (let value of grossArray) {
+  grossTotal = grossTotal + value;
+}
+console.log(grossTotal);
