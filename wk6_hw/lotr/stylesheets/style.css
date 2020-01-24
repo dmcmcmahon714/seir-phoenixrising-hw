@@ -50,8 +50,8 @@ html, body {
     font-size: 60px;
   }
   
-  article li {
-    font-size: 1.6em;
+ li {
+    font-size: 30px;
   }
   
   article:hover {
