@@ -104,13 +104,7 @@ const makeHobbits = () => {
 // Chapter 3
 // ============
 const keepItSecretKeepItSafe = () => {
-    const hobbits = [
-        'Frodo Baggins',
-        'Samwise \'Sam\' Gamgee',
-        'Meriadoc \'Merry\' Brandybuck',
-        'Peregrin \'Pippin\' Took'
-      ];
- 
+
   // 1. create an empty div with an id of 'the-ring'
     const $theRing = $('<div>').attr('id', 'the-ring');
     const $hobbitArray = $('.hobbit')
@@ -181,6 +175,15 @@ for(let i=0; i < buddies.length; i++) {
 const leaveTheShire = () => {
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
       // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
+      const $hobbitlist = $('#The-Shire').children().eq(0);
+      $('#Rivendell').append($hobbitlist);
+      /* for(let i = 0; i < hobbits.length; i++) {
+        console.log(hobbits[i]);  
+        const $hobbitNames = $('<li>').addClass('hobbit').text(hobbits[i]);
+        $hobbitlist.append($hobbitNames);
+        $('#Rivendell').append($hobbitlist);
+      } */
+
 
   //Stretch: add an event handler/listener so that when you click on the `h1` The Shire, this function will be called (be sure to do it in the window.onload/document.ready function)
 
