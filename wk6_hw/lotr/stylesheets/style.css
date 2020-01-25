@@ -72,7 +72,7 @@ html, body {
   /* Mordor */
 #Mordor {
     left: 71%;
-    top: 50%;
+    top: 70%;
     /*background: url(../images/eye_of_sauron.png) no-repeat;*/*/
     background-position: 0em;
     background-size: 7em;
@@ -136,10 +136,12 @@ html, body {
   
     /* Mordor */
 #Mordor {
-      left: 71%;
-      top: 66%;
+      left: 80%;
+      top: 35%;
     }
-  
+aside {
+    display: inline-block;
+}
   
   @media (max-width: 850px) {
   
