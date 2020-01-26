@@ -42,14 +42,13 @@ const makeMiddleEarth = () => {
   console.log("Trying to make middle earth.");
 
   // 1. create a section tag with an id of middle-earth
-
+  const $middleEarth = $('<section>').attr('id', 'middle-earth');
   // 2. append the section to the body of the DOM.
 
   console.log("appended to body");
   // 3. use a for loop to iterate over the lands array that does the following:
         for(let i = 0; i < lands.length; i++) {
             console.log(lands[i]);
-            const $middleEarth = $('<section>').attr('id', 'middle-earth');
             const $landNames = $('<article>').attr('id', (lands[i])).text((lands[i]));
             $middleEarth.append($landNames);
             $("body").append($middleEarth);
@@ -210,7 +209,17 @@ const beautifulStranger = () => {
 // Chapter 8
 // ============
 const forgeTheFellowShip = () => {
-
+  
+  const $theFellowship = $('<div>').attr('id', 'the-fellowship');
+  const $FellowText = $('<h1>').text("The Fellowship");
+  $theFellowship.append($FellowText);
+  $('#middle-earth').append($theFellowship);
+  const $buddies = $('.buddy');
+  const $hobbits = $('.hobbit');
+  $theFellowship.append($buddies);
+  $theFellowship.append($hobbits);
+  
+  console.log($theFellowship);
   // 1. create a new div with an id 'the-fellowship'
 
   // 2. add an h1 with the text 'The Fellowship' to this new div
