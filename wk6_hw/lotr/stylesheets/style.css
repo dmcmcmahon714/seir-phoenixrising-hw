@@ -57,6 +57,11 @@ html, body {
   article:hover {
     text-shadow: 2px 2px 8px black;
   }
+  .the-white {
+    background-color: white;
+    border: 1px solid grey;
+    padding: 0 2 0 2;
+  }
   /* The Shire */
 #The-Shire {
     top: 5%;
