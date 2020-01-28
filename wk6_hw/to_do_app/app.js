@@ -12,8 +12,12 @@ $(() => {
     
     const $listTwo = $('<ul>').attr('id', 'listtwo');
     $('#completed').append($listTwo);
-    $completeTask = $('.tasks').on('click', () => {
-        console.log($completeTask);
+    
+    $completeTask = $listone.on('click', () => {
+        console.log($inputBoxValue);
+        const $secondList = $('<li>');
+        $secondList.append($inputBoxValue);
+        $listTwo.append($secondList);
+       
     })
-
 })
