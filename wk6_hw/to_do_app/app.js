@@ -1,6 +1,8 @@
 $(() => {
+    $listone = $('<ul>').attr('id', 'listone');
+    $('#to-do-list').append($listone);
     $('#submit').on('click', () => {
-        console.log( $('#input-box').val() );
+        $listone.append($('#input-box').val() );
+        event.preventDefault();
       });
-
 })
