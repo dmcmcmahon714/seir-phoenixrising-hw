@@ -254,8 +254,13 @@ const theBalrog = () => {
 // Chapter 10
 // ============
 const hornOfGondor = () => {
-
-  // 1. create a pop-up alert that the horn of gondor has been blown
+  const $GondorBlown = $('<alert>').text("Gondor has been blown!");
+  console.log($GondorBlown);
+  const $boromirDead = $('.buddy').eq(4).wrap('<strike>');
+  console.log($boromirDead);
+  const $removeUruk = $('.baddy').eq(2).remove();
+  console.log($removeUruk);
+  // 1. create a pop-up alert that the horn of gondor has bee;n blown
 
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
 
