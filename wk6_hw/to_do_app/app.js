@@ -1,5 +1,6 @@
-console.log("linked");
-$('form').on('submit', () => {
-  console.log$(('#input-box').val());
-  event.preventDefault();
-});
+$(() => {
+    $('#submit').on('click', () => {
+        console.log( $('#input-box').val() );
+      });
+
+})
