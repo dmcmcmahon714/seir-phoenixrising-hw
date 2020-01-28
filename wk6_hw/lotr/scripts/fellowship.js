@@ -298,7 +298,7 @@ const itsDangerousToGoAlone = () => {
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
-  const $gollum = $('<div>').attr('id', 'gollum');
+  const $gollum = $('<div>').attr('id', 'gollum').text("Gollum");
   $('#Mordor').append($gollum);
  $('#the-ring').append($gollum);
  $('#mount-doom').append($gollum);
@@ -319,7 +319,22 @@ const weWantsIt = () => {
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
-
+  const $removeGollum = $('#gollum').eq(0).remove();
+  console.log($removeGollum);
+  const $removebaddies = $('.baddy').remove();
+  console.log($removebaddies);
+  const $merrytoShire = $('#the-fellowship').children().eq(6);
+  $('#The-Shire').append($merrytoShire);
+ console.log($merrytoShire);
+ const $pippintoShire = $('#the-fellowship').children().eq(6);
+  $('#The-Shire').append($pippintoShire);
+ console.log($pippintoShire);
+ const $frodotoShire = $('#Mordor').children().eq(0);
+  $('#The-Shire').append($frodotoShire);
+ console.log($frodotoShire);
+ const $samtoShire = $('#Mordor').children().eq(0);
+  $('#The-Shire').append($samtoShire);
+ console.log($samtoShire);
   // 2. remove all the baddies from the DOM
 
   // 3. Move all the hobbits back to the shire
