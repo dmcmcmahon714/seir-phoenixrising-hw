@@ -1,10 +1,6 @@
 console.log("it worked");
 
 (()=>{
-
-
-
-
-
+    
 })
 

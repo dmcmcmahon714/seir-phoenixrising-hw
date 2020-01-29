@@ -1,18 +1,15 @@
-h1 {
-    text-align: center;
+.grid {
+    display: flex;                       /* establish flex container */
+    flex-wrap: wrap;                     /* enable flex items to wrap */
+    justify-content: space-around;
+    
   }
-  td {
-    width: 100px;
-    height: 100px;
+  .cell {
+    flex: 0 0 32%;                       /* don't grow, don't shrink, width */
+    height: 50px;
+    margin-bottom: 5px;
+    background-color: grey;
   }
-  table {
-    margin: 5px auto;
-  }
-  .vert {
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-  }
-  .hori {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+  .cell:nth-child(3n) {
+    background-color: grey
   }
