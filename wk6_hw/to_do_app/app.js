@@ -13,11 +13,10 @@ $(() => {
     const $listTwo = $('<ul>').attr('id', 'listtwo');
     $('#completed').append($listTwo);
     
-    $completeTask = $listone.on('click', () => {
-        console.log($inputBoxValue);
-        const $secondList = $('<li>');
-        $secondList.append($inputBoxValue);
-        $listTwo.append($secondList);
-       
+    $completeTask = $('#to-do-list').on('click', (event) => {
+        $movetoSecond = $(event.target);
+        console.log($movetoSecond);
+        $('#listtwo').append($movetoSecond)
+        event.preventDefault();
     })
 })

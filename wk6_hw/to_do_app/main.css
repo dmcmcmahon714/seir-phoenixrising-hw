@@ -15,6 +15,8 @@
 #container {
   width: 90%;
   margin: auto;
+  background: #E7717D;
+  border: 1px solid black;
 }
 
 /* make the div with the id lists into a flex container */
@@ -27,6 +29,7 @@
 body {
   text-align: center;
   font-family: monospace;
+  background: #45A29E;
 }
 
 h1 {
@@ -36,6 +39,8 @@ h1 {
 
 h2{
   font-size: 2vw;
+  border: 1px solid black;
+  border-radius: 20px;
 }
 
 /* Modernize buttons and input */
