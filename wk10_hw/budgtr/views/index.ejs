@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href = "/css/app.css"
+    </head>
+    <body>
+        <h1>Budget Index Page</h1>
+        <ul>
+            <% for(let i =0; i < budget.length; i++){ %>
+                <li>
+                    <a href="/budget/<%=i%>">
+                        <%=budget[i].name%>
+                    </a>
+                </li>
+            <% } %>
+        </ul>
+        <a href="/budget/new">New Budget</a>
+        <nav>
+
+        </nav>
+    </body>
+</html>
