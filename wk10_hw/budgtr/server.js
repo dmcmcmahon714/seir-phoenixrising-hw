@@ -15,10 +15,10 @@ app.use((request, response, next)=>{
     });
 });
 
-app.get('budgets/:index', (request, response)=>{
+app.get('/budget/:indexOfBudgetArray', (request, response)=>{
     response.render('show.ejs',
         {
-            budget: budget[request.params.index]
+            budget: budget[request.params.indexOfBudgetArray]
         }
     );
 });
