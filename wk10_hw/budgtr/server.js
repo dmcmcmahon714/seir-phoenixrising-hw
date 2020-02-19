@@ -3,11 +3,7 @@ const app = express();
 const budget = require('./models/budget.js');
 const port = 3000;
 
-app.use((request, response, next)=>{
-    console.log('I run for all routes')
-    // continue with your routing
-    next();
-  })
+app.use(express.static('public'));
 
   app.get('/budget', (request, response)=>{
     response.render('index.ejs', {
@@ -22,6 +18,10 @@ app.get('/budget/:indexOfBudgetArray', (request, response)=>{
         }
     );
 });
+
+app.get('/budget/new', (request, response)=>{
+    response.render('new.ejs');
+  })
 
 
 app.listen(port,() => {
