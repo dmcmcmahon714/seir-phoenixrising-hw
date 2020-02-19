@@ -2,13 +2,20 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>New</title>
+        <link rel="stylesheet" href='/css/skeleton.css'>
+        <link rel="stylesheet" href='/css/normalize.css'>
     </head>
     <body>
-        <h1>New Budget page</h1>
+        <div class = "container">
+        <h1>New Budget</h1>
         <form action="/budget" method="POST">
+            Date: <input type="text" name="date" /><br/>
             Name: <input type="text" name="name" /><br/>
-            Color: <input type="text" name="color" /><br/>
+            Amount: <input type="text" name="amount" /><br/>
+            From: <input type="text" name="from" /><br/>
+            <input type="submit" name="" value = "Create budget" />
         </form>
+        </div>
     </body>
 </html>

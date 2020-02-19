@@ -7,14 +7,19 @@
     <link rel="stylesheet" href='/css/normalize.css'>
 </head>
 <body>
-    <h1>Budget show page</h1>
-    <ul>
-        <li><%=budget.date; %></li> 
-        <li><%=budget.name; %></li> 
-        <li><%=budget.from; %></li> 
-        <li><%=budget.amount; %></li> 
-        <li><%=budget.tags; %></li> 
-    </ul>
-        
+    <div class = "container">
+    <h2><%=budget.name; %></h2>
+    <a href="/budget" class="back-button">Back</a>
+    <h1>date</h1>
+    <p><%=budget.date; %></p>
+    <h1>name</h1>
+    <p><%=budget.name; %></p>
+    <h1>from</h1>
+    <p><%=budget.from; %></p>
+    <h1>amount</h1>
+    <p><%=budget.amount; %></p>
+    <h1>tags</h1>
+    <p><%=budget.tags; %></p>
+    </div>
 </body>
 </html>
