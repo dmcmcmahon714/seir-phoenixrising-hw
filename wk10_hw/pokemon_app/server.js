@@ -9,13 +9,13 @@ app.get('/', (request, response)=>{
     });
 
     app.get('/pokemon', (req, res) => {
-        // capitalizing just the first letter by looping through the pokemon database
+        // capitlize first letter
         for (let poke of pokemon) {
-          // split the name into its each individual letter
+          // split name into letters
           let splitName = poke.name.split('')
-          // capitalize the first letter
+          // capitilize letters
           splitName[0] = splitName[0].toUpperCase()
-          // join the letters back together
+          // join back together
           poke.name = splitName.join('')
         }
         // render
@@ -23,6 +23,15 @@ app.get('/', (request, response)=>{
           pokemon: pokemon
         })
       })
+
+//show
+
+app.get('/pokemon/:indexOfPokemon', (req, res) => {
+    //render
+    res.render('show.ejs', {
+      pokemon: pokemon[req.params.indexOfPokemon]
+    })
+  })
 
 app.listen(port, ()=>{
     console.log('I am listening on port 3000');
