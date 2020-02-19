@@ -7,19 +7,22 @@
         <link rel="stylesheet" href='/css/normalize.css'>
     </head>
     <body>
-        <h1>Budget Index Page</h1>
-        <ul>
+        <div class = "container">
+        <h1>Budgtr</h1>
+        <table>
             <% for(let i =0; i < budget.length; i++){ %>
-                <li>
+                <tr>
+                <td><%=budget[i].date; %></td>
+                <td>
                     <a href="/budget/<%=i%>">
                         <%=budget[i].name%>
                     </a>
-                </li>
+                </td>
+                <td><%=budget[i].amount; %></td>
+                </tr>
             <% } %>
-        </ul>
+            <table>
         <a href="/budget/new">New Budget</a>
-        <nav>
-
-        </nav>
+    </div>
     </body>
 </html>
