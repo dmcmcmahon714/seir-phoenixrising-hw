@@ -1,8 +1,12 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 3001;
 
 const pokemon = require('./models/pokemon.js')
+
+//middlware
+
+app.use(express.static('./public'))
 
 app.get('/', (request, response)=>{
     response.send('Welcome to the Pokemon App')
@@ -34,5 +38,5 @@ app.get('/pokemon/:indexOfPokemon', (req, res) => {
   })
 
 app.listen(port, ()=>{
-    console.log('I am listening on port 3000');
+    console.log(`connected to poke express on port: ${port}`);
 });
