@@ -71,4 +71,10 @@
     },
   ]
 
-  module.exports = budget
+var sum = 0;
+
+for (var i = 0, len = budget.length; i < len; i++) {
+  sum += budget[i][3]; 
+}
+
+module.exports = budget
