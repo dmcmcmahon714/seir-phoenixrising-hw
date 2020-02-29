@@ -8,8 +8,11 @@ app.get("/captains_log/new", (req, res) => {
   });
 
   // CREATE
-app.post("/fruits/", (req, res) => {
-    req.body('received');
+  app.post("/items/", (req, res) => {
+    Fruit.create(req.body, (error, result) => {
+      // res.send(result);
+      res.redirect("/show.ejs");
+    });
   });
 
 
