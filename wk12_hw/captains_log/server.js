@@ -9,19 +9,19 @@ app.get("/captains_log/new", (req, res) => {
 
   // CREATE
   app.post("/items/", (req, res) => {
-    Fruit.create(req.body, (error, result) => {
+    item.create(req.body, (error, result) => {
       // res.send(result);
       res.redirect("/show.ejs");
     });
   });
 
-
-
-
-
-
-
-
+  // INDEX
+app.get("/logs/", (req, res) => {
+  log.find({}, (error, logs) => {
+    // res.send(fruits);
+    res.render('index.ejs')
+  });
+});
 
 
 
