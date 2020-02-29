@@ -3,8 +3,13 @@ const app = express();
 const port = 3000;
 
 // NEW
-app.get("/items/new", (req, res) => {
-    res.render("new");
+app.get("/captains_log/new", (req, res) => {
+    res.render("new.ejs");
+  });
+
+  // CREATE
+app.post("/fruits/", (req, res) => {
+    req.body('received');
   });
 
 
