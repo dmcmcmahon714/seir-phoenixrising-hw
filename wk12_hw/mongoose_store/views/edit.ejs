@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Product</h1>
+<form action="/products/<%= index %>?_method=PUT" method="POST">
+
+	<!--  NOTE: Thanks to the following `value` attribute trick, the form is pre-populated with the current values for this item :) -->
+	<p>
+	  <label for="name">Name:</label>
+	  <input type="text" name="name" id="name" value="<%=product.name%>" />
+	</p>
+	<p>
+	  <label for="description">Description:</label>
+	  <input type="text" name="description" id="description" value="<%=product.name%>" />
+	</p>
+
+	<input type="submit" name="" value="Submit Changes" />
+</form>
+</body>
+</html>
