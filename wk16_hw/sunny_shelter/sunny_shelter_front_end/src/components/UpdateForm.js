@@ -23,8 +23,8 @@ class UpdateForm extends React.Component {
             />
             <label htmlFor="image">Image</label>
             <input
-              type="image"
-              id="breed"
+              type="text"
+              id="image"
             />
              <label htmlFor="age">Age</label>
             <input

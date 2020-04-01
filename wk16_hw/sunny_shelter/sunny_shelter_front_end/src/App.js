@@ -31,17 +31,15 @@ fetch(baseURL + "/animals")
 class App extends React.Component {
   // store the data made via fetch
   state = {
-    animals: [],
-    animal: null
+    animals: []   
+  };
+
+  getAnimal = (animal) => {
+    this.setState({animal: animal})
   }
 
-getAnimal = (animal) => {
-  this.setState({animal: animal})
-}
-
-
   getAnimals = () => {
-    fetch(baseURL+ '/animals')
+    fetch(baseURL + '/animals')
       .then(data => {
         return data.json()},
         err => console.log(err))
@@ -49,16 +47,16 @@ getAnimal = (animal) => {
        err=> console.log(err))
   }
 
-  handleAddAnimal = (animal) => {
+  handleAddAnimal = animal => {
     const copyAnimals = [...this.state.animals]
-    copyAnimals.unshift(animal)
+    copyAnimals.unshift(animal);
     this.setState({
       animals: copyAnimals,
-      name: ''
-    })
-  }
+      name: ""
+    });
+  };
 
-  deleteAnimal = id => {
+deleteAnimal = id => {
     fetch(baseURL + '/animals/' + id, {
       method:'DELETE'
     }).then( res => {
@@ -70,44 +68,28 @@ getAnimal = (animal) => {
     })
   }
 
-
-
-
 render () {
   console.log("App - render() - state", this.state);
   return (
     <div className='container'>
      <h1>ANIMALS</h1>
      <NewForm baseURL={baseURL} handleAddAnimal={this.handleAddAnimal} />
+     {this.state.animal && <Show animal={this.state.animal} />}
           <table>
-            {/* Conditional logic option 1 */}
-            {/* show the active holiday */}
-            {/* {this.state.holiday
-          ? <Show holiday={this.state.holiday} />
-          : null } */}
-            {/* Conditional logic option 2 */}
-            {this.state.animal && <Show animal={this.state.animal} />}
-  
-            <tbody>
-              {this.state.animals.map(animal => (
-                <tr
-                  key={animal._id}
-                  onMouseOver={() => this.getAnimal(animal)}
-                >
-                  <td>{animal.name}</td>
-                  <td>{animal.species}</td>
-                  <td>{animal.breed}</td>
-                  <td>{animal.image}</td>
-                  <td>{animal.age}</td>
-                  <td>{animal.adopted}</td>
-                  <td>{animal.personalityTraits}</td>
-                  <td onClick={() => this.deleteAnimal(animal._id)}>X</td>
-                </tr>
-              ))}
-            </tbody>
+          <tbody>
+            {this.state.animals.map(animal => (
+              <tr 
+              key={animal._id}
+              onMouseOver={() => this.getAnimal(animal)}
+              >
+                <td> {animal.name}</td>
+                 <td onClick={() => this.deleteAnimal(animal._id)}>X</td>
+              </tr>
+            ))}
+          </tbody>
           </table>
     </div>
-  )
+  );
 }
 componentDidMount() {
   this.getAnimals();
