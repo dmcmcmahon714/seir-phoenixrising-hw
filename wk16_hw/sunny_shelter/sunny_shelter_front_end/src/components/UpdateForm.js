@@ -6,17 +6,12 @@ class UpdateForm extends React.Component {
       <div className="modal edit">
         <form>
           <div className="row">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              id="name"
-            />
             <label htmlFor="species">Species</label>
             <input
               type="text"
               id="species"
             />
-            <label htmlFor="breed">Likes</label>
+            <label htmlFor="breed">Breed</label>
             <input
               type="text"
               id="breed"
@@ -36,7 +31,7 @@ class UpdateForm extends React.Component {
               type="text"
               id="adopted"
             />
-            <label htmlFor="personalityTraits">adopted</label>
+            <label htmlFor="personalityTraits">Personality Traits</label>
             <input
               type="text"
               id="personalityTraits"

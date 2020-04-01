@@ -4,6 +4,7 @@ import './css/skeleton.css'
 import './css/index.css'
 import NewForm from './components/NewForm'
 import Show from './components/Show.js'
+import UpdateForm from './components/UpdateForm'
 
 
 let baseURL = process.env.REACT_APP_BASEURL
@@ -56,6 +57,8 @@ class App extends React.Component {
     });
   };
 
+
+
 deleteAnimal = id => {
     fetch(baseURL + '/animals/' + id, {
       method:'DELETE'
@@ -82,7 +85,7 @@ render () {
               key={animal._id}
               onMouseOver={() => this.getAnimal(animal)}
               >
-                <td> {animal.name}</td>
+                <UpdateForm baseURL={baseURL}/>
                  <td onClick={() => this.deleteAnimal(animal._id)}>X</td>
               </tr>
             ))}
