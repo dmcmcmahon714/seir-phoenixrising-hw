@@ -38,9 +38,9 @@ render() {
               name="name"
               onChange={this.handleChange}
               value={this.state.name}
-              placeholder="add animal"
+              placeholder="Name"
             />
-            <input type="submit" value="Add an Animal" />
+            <input type="submit" value="Search for Animal" />
           </form>
         );
       }

@@ -57,6 +57,10 @@ class App extends React.Component {
     });
   };
 
+  handleUpdateAnimal = animal => {
+    this.setState({animal: animal});
+  }
+
 
 
 deleteAnimal = id => {
@@ -75,7 +79,7 @@ render () {
   console.log("App - render() - state", this.state);
   return (
     <div className='container'>
-     <h1>ANIMALS</h1>
+     <h1>Sunny Animal Shelter</h1>
      <NewForm baseURL={baseURL} handleAddAnimal={this.handleAddAnimal} />
      {this.state.animal && <Show animal={this.state.animal} />}
           <table>
@@ -85,7 +89,7 @@ render () {
               key={animal._id}
               onMouseOver={() => this.getAnimal(animal)}
               >
-                <UpdateForm baseURL={baseURL}/>
+                <td>{animal.name}</td>
                  <td onClick={() => this.deleteAnimal(animal._id)}>X</td>
               </tr>
             ))}
