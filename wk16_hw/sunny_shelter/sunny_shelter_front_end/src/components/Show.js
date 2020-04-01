@@ -7,9 +7,14 @@ class Show extends React.Component {
         <div className="details">
          <h3>Animal info:</h3>
          <hr/>
-         <h4> { this.props.animal.name } Day </h4>
-         <h6><span>Likes:</span> {this.props.animal.likes}</h6>
+         <h4> { this.props.animal.name } </h4>
+         <h6><span>Species:</span> {this.props.animal.species}</h6>
          <p><span>Description:</span> { this.props.animal.description } </p>
+         <p><span>Breed:</span> { this.props.animal.breed} </p>
+         <p><span>Image:</span> { this.props.animal.image} </p>
+         <p><span>Age:</span> { this.props.animal.age} </p>
+         <p><span>Adopted:</span> { this.props.animal.adopted} </p>
+         <p><span>Personality Traits:</span> { this.props.animal.personalityTraits} </p>
        </div>
       </>
     )
