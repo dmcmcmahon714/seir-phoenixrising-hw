@@ -114,13 +114,31 @@ def print_item_sums (arr1, arr2)
 	arr1[:price] + arr2[:price]
 end
 
-p print_item_sums(book, lamp)
+p print_item_sums(book, lamp);
+
+def find_answer num 
+multiples = [*1..num].find_all{ |i| p i % 5 == 0 or i % 3 == 0};
+
+multiples.sum
+end
+
+p find_answer(1000);
+
+require 'prime'
+
+def check_prime? num
 
 
-multiples = [*1..1000].find_all{ |i| p i % 5 == 0 or i % 3 == 0}
+ Prime.prime?(num);
 
-p multiples.sum
+end
 
+p check_prime?(100);
 
-
-
+require 'prime'
+def get_primes num
+Prime.each(num) do |prime|
+  p prime
+end
+end
+p get_primes(100)
