@@ -77,6 +77,9 @@ def multiply_each_by_five arr
 	arr.collect { |n| n * 5}
 end
 
+
+
+
 p multiply_each_by_five(newnums);
 
 
@@ -114,6 +117,9 @@ end
 p print_item_sums(book, lamp)
 
 
+multiples = [*1..1000].find_all{ |i| p i % 5 == 0 or i % 3 == 0}
+
+p multiples.sum
 
 
 
