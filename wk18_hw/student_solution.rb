@@ -79,3 +79,42 @@ end
 
 p multiply_each_by_five(newnums);
 
+
+
+book = {
+  title: 'The Great Gatsby',
+  author: 'F Scott Fitzgerald',
+  year: 1925,
+  price: 10
+}
+
+lamp = {
+  type: 'reading',
+  brand: 'Ikea',
+  price: 25
+}
+
+table = {
+  type: 'bed side',
+  brand: 'Crate & Barrel',
+  color: 'birch',
+  price: 50
+}
+
+def print_price arr
+	arr[:price]
+end
+
+p print_price(lamp);
+
+def print_item_sums (arr1, arr2)
+	arr1[:price] + arr2[:price]
+end
+
+p print_item_sums(book, lamp)
+
+
+
+
+
+
