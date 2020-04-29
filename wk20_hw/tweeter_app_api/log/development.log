@@ -132,3 +132,43 @@ Processing by TweetsController#update as */*
 Completed 200 OK in 47ms (Views: 0.5ms | ActiveRecord: 7.5ms | Allocations: 6521)
 
 
+Started GET "/tweets" for ::1 at 2020-04-29 14:40:51 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/danielmcmahon/Desktop/seir-phoenixrising-hw/wk20_hw/tweeter_app_api/app/controllers/tweets_controller.rb:30: syntax error, unexpected tLABEL
+		render = (status: 204)
+		          ^~~~~~~
+/Users/danielmcmahon/Desktop/seir-phoenixrising-hw/wk20_hw/tweeter_app_api/app/controllers/tweets_controller.rb:39: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/tweets_controller.rb:30: syntax error, unexpected tLABEL
+app/controllers/tweets_controller.rb:39: syntax error, unexpected end-of-input, expecting end
+app/controllers/tweets_controller.rb:30: syntax error, unexpected tLABEL
+app/controllers/tweets_controller.rb:39: syntax error, unexpected end-of-input, expecting end
+Started GET "/tweets" for ::1 at 2020-04-29 14:43:33 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/danielmcmahon/Desktop/seir-phoenixrising-hw/wk20_hw/tweeter_app_api/app/controllers/tweets_controller.rb:39: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/tweets_controller.rb:39: syntax error, unexpected end-of-input, expecting end
+app/controllers/tweets_controller.rb:39: syntax error, unexpected end-of-input, expecting end
+Started GET "/tweets" for ::1 at 2020-04-29 14:43:35 -0500
+  
+SyntaxError (/Users/danielmcmahon/Desktop/seir-phoenixrising-hw/wk20_hw/tweeter_app_api/app/controllers/tweets_controller.rb:39: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/tweets_controller.rb:39: syntax error, unexpected end-of-input, expecting end
+app/controllers/tweets_controller.rb:39: syntax error, unexpected end-of-input, expecting end
+Started GET "/tweets" for ::1 at 2020-04-29 14:44:47 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/danielmcmahon/Desktop/seir-phoenixrising-hw/wk20_hw/tweeter_app_api/app/controllers/tweets_controller.rb:37: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/tweets_controller.rb:37: syntax error, unexpected end-of-input, expecting end
+app/controllers/tweets_controller.rb:37: syntax error, unexpected end-of-input, expecting end
+Started GET "/tweets" for ::1 at 2020-04-29 14:45:25 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:4:in `index'
+Completed 200 OK in 36ms (Views: 29.2ms | ActiveRecord: 4.6ms | Allocations: 4221)
+
+

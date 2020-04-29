@@ -27,13 +27,12 @@ class TweetsController < ApplicationController
 
 	def destroy
 		tweet = Tweet.destroy(params[:id])
-		render = (status: 204)
+		render(status: 204)
+	end
 
 	private
 
 	def tweet_params
   	params.require(:tweet).permit(:title, :content, :author)
 	end
-
-
 end
