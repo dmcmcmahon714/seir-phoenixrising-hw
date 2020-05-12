@@ -1,12 +1,19 @@
 
 import React from 'react'
+import Daters from "./Hello.js"
 
 function Nav(props) {
+	console.log(props);
+	const { handleUpdate, handleDelete, daters } = props;
     return (
       <nav>
-        <h1>Some daters go here</h1>
+        <Daters
+       	daters={daters}
+       	handleDelete={handleDelete}
+       	handleUpdate={handleUpdate}
+       	/>
       </nav>
-    )
+    );
 }
 
 export default Nav

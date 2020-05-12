@@ -10,6 +10,42 @@ class Form extends React.Component {
     ltl: "",
   };
 
+   handleChange = (event) => {
+    this.setState({ [event.target.id]: event.target.value });
+  };
+
+  handleSubmit = (event) => {
+    console.log("running");
+    event.preventDefault();
+
+    const { name, starsign, age, img, ltl } = this.state;
+    const dater = {
+      name: name,
+      starsign: starsign,
+      age: age,
+      img: img,
+      ltl: ltl,
+    };
+
+    if (this.props.dater) dater.id = this.props.dater.id;
+
+    this.props.handleSubmit(event, dater);
+  };
+
+  componentDidMount() {
+    if (this.props.dater) {
+      const { name, starsign, age, img, ltl, id } = this.props.dater;
+      this.setState({
+        name: name || "",
+        starsign: starsign || "",
+        age: age || "",
+        img: img || "",
+        ltl: ltl || "",
+        id: id || "",
+      });
+    }
+  }
+
   render() {
     return (
       <form onSubmit={this.handleSubmit}>

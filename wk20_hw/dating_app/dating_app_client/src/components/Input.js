@@ -2,7 +2,7 @@
 import React from 'react'
 
 const Input = props => {
-  const {handleChange, name, placeholder, title, type, value} = props
+  const {handleChange, name, placeholder, type, value} = props
     return (
       <>
         <label htmlFor={name}>{name}</label>

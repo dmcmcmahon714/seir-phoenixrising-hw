@@ -3,7 +3,7 @@
 function Header(props) {
     return (
       <header>
-        <h1>Dating App Header</h1>
+        <h1>My Dating App</h1>
       </header>
     )
 }
